@@ -1,0 +1,45 @@
+{% load static %}
+<!doctype html>
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact - Frozen Yogurt Shop</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/mobile.css' %}">
+  <script src="{% static 'js/mobile.js' %}" type="text/javascript"></script>
+</head>
+<body>
+<div id="page">
+  <div id="header">
+    <div>
+      <a href="{% url 'froyo_home:homepage' %}" class="logo"><img src="{% static 'froyo_contact/media/logo.png' %}" alt=""></a>
+      <ul id="navigation">
+        <li>
+          <a href="{% url 'froyo_home:homepage' %}">Home</a>
+        </li>
+        <li class="menu">
+          <a href="{% url 'froyo_about:about' %}">About</a>
+          <ul class="primary">
+            <li>
+              <a href="{% url 'froyo_product:product' %}">Product</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu">
+          <a href="{% url 'froyo_blog:blog' %}">Blog</a>
+        </li>
+        <li class="selected">
+          <a href="{% url 'froyo_contact:contact' %}">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+  <div id="body">
+    <h2>Thank you for sharing your thoughts {{name}}!</h2>
+    <p>We'll look into that and send you a mail soon enough.</p>
+    <p class="my-5"><a href="{% url 'froyo_contact:contact' %}">Click here to go back to contact page.</a></p>
+  </div>
+</body>
